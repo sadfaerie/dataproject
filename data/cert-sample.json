@@ -1,0 +1,57 @@
+{
+    "Certificate": {
+        "Archived": false,
+        "FriendlyName": "ssl-web-cert-uk-london-1",
+        "HasPrivateKey": false,
+        "PrivateKey": null,
+        "IssuerName": [
+            {"CN": "COMODO RSA Domain Validation Secure Server CA"}, 
+            {"O": "COMODO CA Limited"}, 
+            {"OU": null},
+            {"L": "Salford"}, 
+            {"S": "Greater Manchester"},
+            {"C": "GB"}
+            ],
+        "NotAfter": "2020-02-14T23:59:59+00:00",
+        "NotBefore": "2019-02-14T00:00:00+00:00",
+        "IssueDate": "2019-02-14T00:00:00+00:00",
+        "ExpirationDate": "2020-02-14T23:59:59+00:00",
+        "SignatureAlgorithm": {
+            "Value": "1.2.840.113549.1.1.11",
+            "FriendlyName": "sha256RSA"
+            },
+        "SubjectName": [
+            {"CN": "*.platform.webcompany.com"}, 
+            {"O": "Web Company"},
+            {"OU": "WebDev"},
+            {"L": "Fulham"},
+            {"S": "London"},
+            {"C": "GB"}
+            ],
+        "Thumbprint": "78258812B182BB6C82532DC409838B203A3B3C2",
+        "KeyUsage": [
+            "cRLSign",
+            "dataEncipherment",
+            "digitalSignature",
+            "keyAgreement",
+            "keyCertSign",
+            "keyEncipherment"
+            ]
+        },
+    "WebApp": {
+        "Subscription": "COMPANY-PROD",
+        "ResourceGroup": "WebApps-RG1",
+        "Location": "UK South",
+        "VaultName": "WebApps-KV-1",
+        "KeyVaultSecretStatus": "Initialized",
+        "Name": "APP-platform.webcompany.com",
+        "HostNames": [
+            "*.platform.webcompany.com",
+            "platform.webcompany.com"
+        ],
+        "Tags": {
+            "Team": "WebDevs",
+            "Environment": "Production"
+        }
+    }
+}

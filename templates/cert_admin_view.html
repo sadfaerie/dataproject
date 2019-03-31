@@ -1,0 +1,170 @@
+{% extends 'layout.html' %}
+
+{% block page_content %}
+
+<div id="cert_admin_view" class="container">
+    <!-- General -->
+    <div class="">
+        <!-- Usages -->
+        <div class="mt-5 mb-3">
+        SSL WEB APP CERTIFICATE PROPERTY
+        </div>
+    
+        <div id="certificate">
+        <div>
+            <button type="button" class="btn btn-outline-info mb-3">DOWNLOAD</button>
+            <button type="button" class="btn btn-outline-warning mb-3">EDIT</button>
+            <button type="button" class="btn btn-outline-danger mb-3">DELETE</button>
+        </div>
+        <!-- Subject -->
+        <div class="card text-white bg-transparent border-info mb-3">
+            <div class="card-header">
+                Subject
+            </div>
+            <div class="card-body">
+            <div>
+                <div class="card-title">Common Name (CN)</div>
+                <div class="card-text">{{ cert_subject_cn }}</div>
+            </div>
+            <div>
+                <div class="card-title">Organisation (O)</div>
+                <div class="card-text">{{ cert_subject_o }}</div>
+            </div>
+            <div>
+                <div class="card-title">Organisational Unit (OU)</div>
+                <div class="card-text">{{ cert_subject_ou }}</div>
+            </div>
+            <div>
+                <div class="card-title">Location (L)</div>
+                <div class="card-text">{{ cert_subject_l }}</div>
+            </div>
+            <div>
+                <div class="card-title">Site (S)</div>
+                <div class="card-text">{{ cert_subject_s }}</div>
+                </div>
+            <div>
+                <div class="card-title">Country (C)</div>
+                <div class="card-text">{{ cert_subject_c }}</div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Issued by -->
+        <div class="card text-white bg-transparent border-info mb-3">
+            <div class="card-header">
+                Issuer
+            </div>
+            <div class="card-body">
+            <div>
+                <div class="card-title">Common Name (CN)</div>
+                <div class="card-text">{{ cert_issuer_cn }}</div>
+            </div>
+            <div>
+                <div class="card-title">Organisation (O)</div>
+                <div class="card-text">{{ cert_issuer_o }}</div>
+            </div>
+            <div>
+                <div class="card-title">Organisational Unit (OU)</div>
+                <div class="card-text">{{ cert_issuer_ou }}</div>
+            </div>
+            <div>
+                <div class="card-title">Location (L)</div>
+                <div class="card-text">{{ cert_issuer_l }}</div>
+            </div>
+            <div>
+                <div class="card-title">Site (S)</div>
+                <div class="card-text">{{ cert_issuer_s }}</div>
+            </div>
+            <div>
+                <div class="card-title">Country (C)</div>
+                <div class="card-text">{{ cert_issuer_c }}</div>
+            </div>
+            </div>
+        </div>
+        
+        <!-- Validity -->
+        <div class="card text-white bg-transparent border-info mb-3">
+            <div class="card-header">
+                Validity Period
+            </div>
+            <div class="card-body">
+            <div>
+                <div class="card-title">Issued On</div>
+                <div class="card-text">{{ cert_issued_on }}</div>
+            </div>
+            <div>
+                <div class="card-title">Expires On</div>
+                <div class="card-text">{{ cert_expires_on }}</div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Other Certificate Data-->
+        <div class="card text-white bg-transparent border-info mb-3">
+            <div class="card-header">
+                Admin Certificate Data
+            </div>
+            <div>
+                <div class="card-title">Friendly Name</div>
+                <div class="card-text">{{ cert_friendly_name }}</div>
+            </div>
+            <div>
+                <div class="card-title">Archived</div>
+                <div class="card-text">{{ cert_archived }}</div>
+            </div>
+            <div>
+                <div class="card-title">Thumbprint</div>
+                <div class="card-text">{{ cert_thumbprint }}</div>
+            </div>
+            <div>
+                <div class="card-title">Key Usage</div>
+                {% for item in cert_key_usage %}
+                <div class="card-text">{{ item }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Web App Details -->
+        <div class="card text-white bg-transparent border-info mb-3">
+            <div class="card-header">
+                Web App Details
+            </div>
+            <div>
+                <div class="card-title">Subscription</div>
+                <div class="card-text"></div>
+            </div>
+            <div>
+                <div class="card-title">Resource Group</div>
+                <div class="card-text"></div>
+            </div>
+            <div>
+                <div class="card-title">card-title Vault</div>
+                <div class="card-text"></div>
+            </div>
+            <div>
+                <div class="card-title">card-title Status</div>
+                <div class="card-text"></div>            
+            </div>
+            <div>
+                <div class="card-title">Web App Name</div>
+                <div class="card-text"></div>             
+            </div>
+            <div>
+                <div class="card-title">Host Names</div>
+                {% for item in cert_host_names %}
+                <div class="card-text">{{ item }}</div>
+                {% endfor %}
+            </div>
+            <div>
+                <div class="card-title">Tags</div>
+                {% for item in cert_tags %}
+                <div class="card-text">{{ item }}</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

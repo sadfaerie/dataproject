@@ -1,0 +1,12 @@
+body {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;
+  color: #000;
+}
+
+.card-header {
+  color: #17a2b8
+}
+
+.card-body {
+  color: #5f5f5f
+}

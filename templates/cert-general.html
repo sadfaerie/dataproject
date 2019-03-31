@@ -1,0 +1,87 @@
+{% extends 'certificate.html' %}
+{% block content %}
+
+<div id="cert_admin_view">
+        <!-- General -->
+        <div class="">
+            <!-- Usages -->
+            <h3>SSL WEB APP CERTIFICATE PROPERTY</h3>
+    
+            <div id="certificate" class="">
+    
+            <!-- Subject -->
+            <div>
+                <h3>Subject</h3>
+            </div>
+            <div>
+                <div class="key">Common Name (CN)</div>
+                <div class="value">{{ cert_subject_cn }}</div>
+            </div>
+            <div>
+                <div class="key">Organisation (O)</div>
+                <div class="value">{{ cert_subject_o }}</div>
+            </div>
+            <div>
+                <div class="key">Organisational Unit (OU)</div>
+                <div class="value">{{ cert_subject_ou }}</div>
+            </div>
+            <div>
+                <div class="key">Location (L)</div>
+                <div class="value">{{ cert_subject_l }}</div>
+            </div>
+            <div>
+                <div class="key">Site (S)</div>
+                <div class="value">{{ cert_subject_s }}</div>
+             </div>
+            <div>
+                <div class="key">Country (C)</div>
+                <div class="value">{{ cert_subject_c }}</div>
+            </div>
+
+            <!-- Issued by -->
+            <div>
+              <h3>Issuer</h3>
+            </div>
+            <div>
+                <div class="key">Common Name (CN)</div>
+                <div class="value">{{ cert_issuer_cn }}</div>
+            </div>
+            <div>
+                <div class="key">Organisation (O)</div>
+                <div class="value">{{ cert_issuer_o }}</div>
+            </div>
+            <div>
+                <div class="key">Organisational Unit (OU)</div>
+                <div class="value">{{ cert_issuer_ou }}</div>
+            </div>
+            <div>
+                <div class="key">Location (L)</div>
+                <div class="value">{{ cert_issuer_l }}</div>
+            </div>
+            <div>
+                <div class="key">Site (S)</div>
+                <div class="value">{{ cert_issuer_s }}</div>
+            </div>
+            <div>
+                <div class="key">Country (C)</div>
+                <div class="value">{{ cert_issuer_c }}</div>
+            </div>
+
+            <!-- Validity -->
+            <div>
+                <h3>Validity Period</h3>
+            </div>
+            <div>
+                <div class="key">Issued On</div>
+                <div class="value">{{ cert_issued_on }}</div>
+            </div>
+            <div>
+                <div class="key">Expires On</div>
+                <div class="value">{{ cert_expires_on }}</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
