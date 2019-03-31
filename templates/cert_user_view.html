@@ -2,84 +2,101 @@
 
 {% block page_content %}
 
-<div id="cert_user_view">
-        <!-- General -->
-        <div class="">
-            <!-- Usages -->
-            <h3>SSL WEB APP CERTIFICATE PROPERTY</h3>
+<div id="cert_admin_view" class="container">
+    <!-- General -->
+    <div class="">
+        <!-- Usages -->
+        <div class="m-3 p-3">
+        <h2>SSL WEB APP CERTIFICATE PROPERTY</h2>
+        </div>
     
-            <div id="certificate" class="">
-    
-            <!-- Subject -->
+        <div id="certificate" class="card p-5">
+        <div>
+            <button type="button" class="btn btn-outline-info mb-3">DOWNLOAD</button>
+            <div class="alert alert-warning" role="alert">Editing not allowed. To edit or delete certificate, please log in as admin.</div>
+        </div>
+        <!-- Subject -->
+        <div class="card text-white bg-transparent border-info mb-3">
+            <div class="card-header">
+                Subject
+            </div>
+            <div class="card-body">
             <div>
-                <h3>Subject</h3>
+                <div class="card-title">Common Name (CN)</div>
+                <div class="card-text">{{ cert_subject_cn }}</div>
             </div>
             <div>
-                <div class="key">Common Name (CN)</div>
-                <div class="value">{{ cert_subject_cn }}</div>
+                <div class="card-title">Organisation (O)</div>
+                <div class="card-text">{{ cert_subject_o }}</div>
             </div>
             <div>
-                <div class="key">Organisation (O)</div>
-                <div class="value">{{ cert_subject_o }}</div>
+                <div class="card-title">Organisational Unit (OU)</div>
+                <div class="card-text">{{ cert_subject_ou }}</div>
             </div>
             <div>
-                <div class="key">Organisational Unit (OU)</div>
-                <div class="value">{{ cert_subject_ou }}</div>
+                <div class="card-title">Location (L)</div>
+                <div class="card-text">{{ cert_subject_l }}</div>
             </div>
             <div>
-                <div class="key">Location (L)</div>
-                <div class="value">{{ cert_subject_l }}</div>
-            </div>
+                <div class="card-title">Site (S)</div>
+                <div class="card-text">{{ cert_subject_s }}</div>
+                </div>
             <div>
-                <div class="key">Site (S)</div>
-                <div class="value">{{ cert_subject_s }}</div>
-             </div>
-            <div>
-                <div class="key">Country (C)</div>
-                <div class="value">{{ cert_subject_c }}</div>
+                <div class="card-title">Country (C)</div>
+                <div class="card-text">{{ cert_subject_c }}</div>
             </div>
+            </div>
+        </div>
 
-            <!-- Issued by -->
+        <!-- Issued by -->
+        <div class="card text-white bg-transparent border-info mb-3">
+            <div class="card-header">
+                Issuer
+            </div>
+            <div class="card-body">
             <div>
-              <h3>Issuer</h3>
+                <div class="card-title">Common Name (CN)</div>
+                <div class="card-text">{{ cert_issuer_cn }}</div>
             </div>
             <div>
-                <div class="key">Common Name (CN)</div>
-                <div class="value">{{ cert_issuer_cn }}</div>
+                <div class="card-title">Organisation (O)</div>
+                <div class="card-text">{{ cert_issuer_o }}</div>
             </div>
             <div>
-                <div class="key">Organisation (O)</div>
-                <div class="value">{{ cert_issuer_o }}</div>
+                <div class="card-title">Organisational Unit (OU)</div>
+                <div class="card-text">{{ cert_issuer_ou }}</div>
             </div>
             <div>
-                <div class="key">Organisational Unit (OU)</div>
-                <div class="value">{{ cert_issuer_ou }}</div>
+                <div class="card-title">Location (L)</div>
+                <div class="card-text">{{ cert_issuer_l }}</div>
             </div>
             <div>
-                <div class="key">Location (L)</div>
-                <div class="value">{{ cert_issuer_l }}</div>
+                <div class="card-title">Site (S)</div>
+                <div class="card-text">{{ cert_issuer_s }}</div>
             </div>
             <div>
-                <div class="key">Site (S)</div>
-                <div class="value">{{ cert_issuer_s }}</div>
+                <div class="card-title">Country (C)</div>
+                <div class="card-text">{{ cert_issuer_c }}</div>
+            </div>
+            </div>
+        </div>
+        
+        <!-- Validity -->
+        <div class="card text-white bg-transparent border-info mb-3">
+            <div class="card-header">
+                Validity Period
+            </div>
+            <div class="card-body">
+            <div>
+                <div class="card-title">Issued On</div>
+                <div class="card-text">{{ cert_issued_on }}</div>
             </div>
             <div>
-                <div class="key">Country (C)</div>
-                <div class="value">{{ cert_issuer_c }}</div>
+                <div class="card-title">Expires On</div>
+                <div class="card-text">{{ cert_expires_on }}</div>
             </div>
-
-            <!-- Validity -->
-            <div>
-                <h3>Validity Period</h3>
             </div>
-            <div>
-                <div class="key">Issued On</div>
-                <div class="value">{{ cert_issued_on }}</div>
-            </div>
-            <div>
-                <div class="key">Expires On</div>
-                <div class="value">{{ cert_expires_on }}</div>
-            </div>
+        </div>
 
         </div>
     </div>
